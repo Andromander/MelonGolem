@@ -153,7 +153,7 @@ public class EntityMelonGolem extends AbstractGolem implements RangedAttackMob, 
 		slice.shoot(d1, d2 + f, d3, 1.6F, 12.0F);
 		this.playSound(SoundEvents.SNOW_GOLEM_SHOOT, 1.0F, 1.0F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
 		slice.teleportTo(slice.getX(), slice.getY(), slice.getZ());
-		MelonMod.spawnNonLivingEntity(level, slice);
+		level.addFreshEntity(slice);
 	}
 
 	@Override
